@@ -1,0 +1,41 @@
+* {
+	font-family: themify;
+	color: globalFontColor;
+}
+
+.Main{
+	background: windowBackground;
+}
+
+.FavoriteFrame{
+	border: 2px solid borderFavFrame;
+}
+
+.ShortCut #PH{
+	border-bottom: 2px solid borderFH;
+	background-color: backgroundFH;
+	color: fontColorFH;
+	padding-left: 5px;
+	border-top: 0px;
+}
+.ShortCut #PF{
+	border-bottom: 2px solid borderFF;
+	background-color: backgroundFF;
+	padding-left: 15px;
+	color: fontColorFF;
+	border-top: 0px;
+}
+.ShortCut #P1{
+	border-bottom: 2px solid borderF1;
+	background-color: backgroundF1;
+	padding-left: 15px;
+	color: fontColorF1;
+	border-top: 0px;
+}
+.ShortCut #P2{
+	border-bottom: 2px solid borderF2;
+	background-color: backgroundF2;
+	padding-left: 20px;
+	color: fontColorF2;
+	border-top: 0px;
+}
