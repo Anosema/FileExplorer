@@ -1,35 +1,23 @@
 {
-	"Fav":{
-		"pins":{
-			"Folder":{
-				"Desktop": "C:\\Users\\Martin\\Desktop",
-				"Documents": "C:\\Users\\Martin\\Documents"
-			},
-			"Documents": "C:\\Users\\Martin\\Documents"
-		},
-		"computer":{
-			"Desktop": "C:\\Users\\Martin\\Desktop",
-			"Documents": "C:\\Users\\Martin\\Documents",
-			"Music": "C:\\Users\\Martin\\Music",
-			"Videos": "C:\\Users\\Martin\\Videos",
-			"Downloads": "C:\\Users\\Martin\\Downloads"
-		}
+	"theme":{
+		"titleBarButtonAccentuation": "#8083ff",
+		"titleBarBackgroundColor": "#232323",
+		"titleBarBorderColor": "#cecece",
+		"titleBarTextColor": "#8685ef",
+		"titleBarIconColor": "#2bacbc",
+
+		"windowBackgroundColor": "#393746",
+
+		"navSocketTabNormalBorderColor": "#cecece",
+		"navSocketTabHoverBorderColor": "#8685ef",
+		"navSocketButtonAccentuation": "#8083ff",
+		"navSocketTextColor": "#8685ef",
+		"navSocketTabBackgroundColor": "#393746"
+
 	},
-	"scheme":{
-		"windowBackground": "rgb(18, 18, 18)",
-		"globalFontColor": "lightgray",
-		"borderFavFrame": "rgb(28, 28, 28)",
-		"borderFF": "rgb(42, 42, 42)",
-		"borderFH": "rgb(49, 49, 49)",
-		"borderF1": "rgb(56, 56, 56)",
-		"borderF2": "rgb(63, 63, 63)",
-		"fontColorFH": "rgb(171,32,253)",
-		"fontColorFF": "rgb(151,12,233)",
-		"fontColorF1": "rgb(131,0,213)",
-		"fontColorF2": "rgb(111,0,193)",
-		"backgroundFF": "rgb(42, 42, 42)",
-		"backgroundFH": "rgb(49, 49, 49)",
-		"backgroundF1": "rgb(56, 56, 56)",
-		"backgroundF2": "rgb(63, 63, 63)"
+	"navigation":{
+		"showHidden": true,
+		"exceptions":[
+		]
 	}
 }

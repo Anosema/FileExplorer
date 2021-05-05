@@ -1,41 +1,68 @@
 * {
 	font-family: themify;
-	color: globalFontColor;
+	/*border: 1px solid red;*/
 }
+
+
+
 
 .Main{
-	background: windowBackground;
+	background-color: windowBackgroundColor;
 }
 
-.FavoriteFrame{
-	border: 2px solid borderFavFrame;
+.QTitleBar{
+	border-bottom: 1px solid titleBarBorderColor;
+	background-color: titleBarBackgroundColor;
+	border-top: none;
+}
+.QTitleBar #Icon{
+	color: titleBarIconColor;
+}
+.QTitleBar #Title{
+	color: titleBarTextColor;
+}
+.QTitleBar .QPushButton{
+	color: titleBarButtonAccentuation;
+	border-radius: 9px;
+	border: none;
+}
+.QTitleBar .QPushButton:checked, .QTitleBar .QPushButton:pressed, .QTitleBar .QPushButton:hover{
+	background-color: titleBarButtonAccentuation;
+	color: titleBarBackgroundColor;
 }
 
-.ShortCut #PH{
-	border-bottom: 2px solid borderFH;
-	background-color: backgroundFH;
-	color: fontColorFH;
-	padding-left: 5px;
-	border-top: 0px;
+
+.QTabWidget::pane{
+	border: 1px solid #cecece;
 }
-.ShortCut #PF{
-	border-bottom: 2px solid borderFF;
-	background-color: backgroundFF;
-	padding-left: 15px;
-	color: fontColorFF;
-	border-top: 0px;
+.QTabWidget > .QPushButton{
+	color: navSocketButtonAccentuation;
+	border-radius: 5px;
+	border: none;
 }
-.ShortCut #P1{
-	border-bottom: 2px solid borderF1;
-	background-color: backgroundF1;
-	padding-left: 15px;
-	color: fontColorF1;
-	border-top: 0px;
+.QTabWidget > .QPushButton:pressed, .QTabWidget > .QPushButton:hover{
+	background-color: navSocketButtonAccentuation;
+	color: windowBackgroundColor;
 }
-.ShortCut #P2{
-	border-bottom: 2px solid borderF2;
-	background-color: backgroundF2;
-	padding-left: 20px;
-	color: fontColorF2;
-	border-top: 0px;
+
+.QTabBar::tab{
+	border: 1px solid navSocketTabNormalBorderColor;
+	background-color: navSocketTabBackgroundColor;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	color: navSocketTextColor;
+	padding: 5px;
 }
+.QTabBar::tab:hover{
+	border: 1px solid navSocketTabHoverBorderColor;
+}
+
+.QTabBar::tab:selected {
+	border: 1px solid navSocketTabHoverBorderColor;
+	margin-left: -4px;
+	margin-right: -4px;
+}
+.QTabBar::tab:first:selected{margin-left: 0;}
+.QTabBar::tab:last:selected{margin-right: 0;}
+.QTabBar::tab:!selected {margin-top: 2px;}
+.QTabBar::tab:only-one{margin: 0;}
