@@ -12,12 +12,20 @@
 		"navSocketTabHoverBorderColor": "#8685ef",
 		"navSocketButtonAccentuation": "#8083ff",
 		"navSocketTextColor": "#8685ef",
-		"navSocketTabBackgroundColor": "#393746"
+		"navSocketTabBackgroundColor": "#393746",
+
+		"navTabElementNormalBottomLine": "#00c896",
+		"navTabElementHoverBottomLine": "#00c6cf",
+
+		"navTabElementText": "#cecece"
 
 	},
 	"navigation":{
-		"showHidden": true,
-		"exceptions":[
-		]
+		"showHidden": false,
+		"hideExceptions":[
+		],
+		"showExceptions":[
+		],
+		"layout": "list"
 	}
 }

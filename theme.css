@@ -33,7 +33,8 @@
 
 
 .QTabWidget::pane{
-	border: 1px solid #cecece;
+	border: none;
+	background-color: transparent;
 }
 .QTabWidget > .QPushButton{
 	color: navSocketButtonAccentuation;
@@ -59,10 +60,22 @@
 
 .QTabBar::tab:selected {
 	border: 1px solid navSocketTabHoverBorderColor;
-	margin-left: -4px;
 	margin-right: -4px;
+	margin-left: -4px;
 }
 .QTabBar::tab:first:selected{margin-left: 0;}
 .QTabBar::tab:last:selected{margin-right: 0;}
 .QTabBar::tab:!selected {margin-top: 2px;}
 .QTabBar::tab:only-one{margin: 0;}
+
+.Elements{
+	border-bottom: 1px solid navTabElementNormalBottomLine;
+	border-top: none;
+}
+.Elements .QLabel{
+	color: navTabElementText;
+}
+.Elements:hover{
+	border-bottom: 1px solid navTabElementHoverBottomLine;
+	border-top: none
+}

@@ -49,7 +49,7 @@ class Main(QBorderlessWindow):
 		print(e.text(), e.key(), hex(e.key()))
 	def resizeEvent(self, e):
 		self.titleBar.setGeometry(0, 0, self.width(), 20)
-		self.navSocket.setGeometry(100, 100, self.width()-100-self.gripSize, self.height()-100-self.gripSize)
+		self.navSocket.setGeometry(int(.1*self.width()), 100, int(.9*self.width())-self.gripSize, self.height()-100-self.gripSize)
 		self.navSocket.cornerWidget().setGeometry(self.navSocket.width()-20, 0, 20, 20)
 
 		QBorderlessWindow.resizeEvent(self)
