@@ -1,81 +1,89 @@
 * {
 	font-family: themify;
-	/*border: 1px solid red;*/
 }
-
-
-
-
 .Main{
 	background-color: windowBackgroundColor;
 }
+/* QTitleBar */
+	.QTitleBar{
+		border-bottom: 1px solid titleBarBorderColor;
+		background-color: titleBarBackgroundColor;
+		border-top: none;
+	}
+	.QTitleBar #Icon{
+		color: titleBarIconColor;
+	}
+	.QTitleBar #Title{
+		color: titleBarTextColor;
+	}
+	.QTitleBar .QPushButton{
+		color: titleBarButtonAccentuation;
+		border-radius: 9px;
+		border: none;
+	}
+	.QTitleBar .QPushButton:checked, .QTitleBar .QPushButton:pressed, .QTitleBar .QPushButton:hover{
+		background-color: titleBarButtonAccentuation;
+		color: titleBarBackgroundColor;
+	}
+/* QTabWidget */
+	.QTabWidget::pane{
+		border: none;
+		background-color: transparent;
+	}
+	#NewTabButton{
+		color: navSocketButtonAccentuation;
+		border-radius: 5px;
+		border: none;
+	}
+	#NewTabButton:pressed, #NewTabButton:hover{
+		background-color: navSocketButtonAccentuation;
+		color: windowBackgroundColor;
+	}
 
-.QTitleBar{
-	border-bottom: 1px solid titleBarBorderColor;
-	background-color: titleBarBackgroundColor;
-	border-top: none;
-}
-.QTitleBar #Icon{
-	color: titleBarIconColor;
-}
-.QTitleBar #Title{
-	color: titleBarTextColor;
-}
-.QTitleBar .QPushButton{
-	color: titleBarButtonAccentuation;
-	border-radius: 9px;
-	border: none;
-}
-.QTitleBar .QPushButton:checked, .QTitleBar .QPushButton:pressed, .QTitleBar .QPushButton:hover{
-	background-color: titleBarButtonAccentuation;
-	color: titleBarBackgroundColor;
-}
+	.QTabBar::tab{
+		border: 1px solid navSocketTabNormalBorderColor;
+		background-color: navSocketTabBackgroundColor;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		color: navSocketTextColor;
+		padding: 5px;
+	}
+	.QTabBar::tab:hover{
+		border: 1px solid navSocketTabHoverBorderColor;
+	}
 
-
-.QTabWidget::pane{
-	border: none;
-	background-color: transparent;
-}
-.QTabWidget > .QPushButton{
-	color: navSocketButtonAccentuation;
-	border-radius: 5px;
-	border: none;
-}
-.QTabWidget > .QPushButton:pressed, .QTabWidget > .QPushButton:hover{
-	background-color: navSocketButtonAccentuation;
-	color: windowBackgroundColor;
-}
-
-.QTabBar::tab{
-	border: 1px solid navSocketTabNormalBorderColor;
-	background-color: navSocketTabBackgroundColor;
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
-	color: navSocketTextColor;
-	padding: 5px;
-}
-.QTabBar::tab:hover{
-	border: 1px solid navSocketTabHoverBorderColor;
-}
-
-.QTabBar::tab:selected {
-	border: 1px solid navSocketTabHoverBorderColor;
-	margin-right: -4px;
-	margin-left: -4px;
-}
-.QTabBar::tab:first:selected{margin-left: 0;}
-.QTabBar::tab:last:selected{margin-right: 0;}
-.QTabBar::tab:!selected {margin-top: 2px;}
-.QTabBar::tab:only-one{margin: 0;}
-
-.Elements{
-	border-bottom: 1px solid navTabElementNormalBottomLine;
-	border-top: none;
-}
-.Elements .QLabel{
-	color: navTabElementText;
-}
-.Elements:hover{
-	border-bottom: 1px solid navTabElementHoverBottomLine;
-	border-top: none
-}
+	.QTabBar::tab:selected {
+		border: 1px solid navSocketTabHoverBorderColor;
+		margin-right: -4px;
+		margin-left: -4px;
+	}
+	.QTabBar::tab:first:selected{margin-left: 0;}
+	.QTabBar::tab:last:selected{margin-right: 0;}
+	.QTabBar::tab:!selected {margin-top: 2px;}
+	.QTabBar::tab:only-one{margin: 0;}
+/* QTabWidget Content*/
+	.Elements{
+		border-bottom: 1px solid navTabElementNormalBottomLine;
+		border-top: none;
+	}
+	.Elements .QLabel{
+		color: navTabElementText;
+	}
+	.Elements:hover{
+		border-bottom: 1px solid navTabElementHoverBottomLine;
+		border-top: none
+	}
+/* History Button */
+	#HistoryButton{
+		border: 1px solid historyButtonBorder;
+		color: historyButtonAccentuation;
+		border-radius: 10px;
+	}
+	#HistoryButton:pressed, #HistoryButton:hover{
+		background-color: historyButtonAccentuation;
+		color: windowBackgroundColor;
+	}
+	#HistoryButton:disabled{
+		background-color: historyButtonDisabled;
+		color: windowBackgroundColor;
+	}

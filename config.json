@@ -16,16 +16,24 @@
 
 		"navTabElementNormalBottomLine": "#00c896",
 		"navTabElementHoverBottomLine": "#00c6cf",
+		"navTabElementText": "#cecece",
 
-		"navTabElementText": "#cecece"
+
+		"historyButtonBorder": "transparent",
+		"historyButtonAccentuation": "#8083ff",
+		"historyButtonDisabled": "#6d848a"
+
 
 	},
 	"navigation":{
-		"showHidden": false,
+		"showHidden": true,
 		"hideExceptions":[
 		],
 		"showExceptions":[
 		],
-		"layout": "list"
+		"layout": "list",
+		"informations":[
+			""
+		]
 	}
 }
