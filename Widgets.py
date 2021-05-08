@@ -135,10 +135,14 @@ class QNavTab(QScrollArea):
 		self.elementsFrame.setFocusPolicy(Qt.NoFocus)
 		self.setWidget(self.elementsFrame)
 
+		self.closeButton = QPushButton(iconDir["ti-close"], self)
+		self.closeButton.clicked.connect(lambda: self.window.closeNavTab(self))
+		self.closeButton.setObjectName("closeButton")
+
 		self.elementsList = []
-		self.shown = []
 		self.historyBack = []
 		self.historyNext = []
+		self.shown = []
 
 		self.nameHeader = QLabel("Name", self.elementsFrame)
 		self.typeHeader = QLabel("Type", self.elementsFrame)
@@ -146,7 +150,7 @@ class QNavTab(QScrollArea):
 
 	def changeDirectory(self, path):
 		self.currentDirectory = path
-		self.displayName = self.currentDirectory if len(self.currentDirectory.split("/")) <= 2 else "/".join(self.currentDirectory.split("/")[-2:])
+		self.displayName = self.currentDirectory# if len(self.currentDirectory.split("/")) <= 2 else "/".join(self.currentDirectory.split("/")[-2:])
 		self.window.navSocket.setTabText(self.window.navSocket.currentIndex(), self.displayName)
 		self.window.navSocket.setTabToolTip(self.window.navSocket.currentIndex(), self.currentDirectory)
 		self.window.pathLine.setText(self.currentDirectory)

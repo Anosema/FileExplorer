@@ -20,7 +20,8 @@ class Main(QBorderlessWindow):
 		self.newTabButton = QPushButton(iconDir["ti-plus"], self)
 		self.navTabs = []
 
-		self.navSocket.tabCloseRequested.connect(self.closeNavTab)
+		self.pathLine.setFocusPolicy(Qt.NoFocus)
+
 		self.navSocket.currentChanged.connect(self.changeNavTab)
 		self.navSocket.setElideMode(Qt.ElideLeft)
 		self.navSocket.setTabShape(QTabWidget.Triangular)
@@ -70,9 +71,9 @@ class Main(QBorderlessWindow):
 		self.navTabs.append(QNavTab(self))
 		self.navTabs[-1].changeDirectory(self.navTabs[-2].currentDirectory if len(self.navTabs) != 1 else expanduser("~"))
 		self.navSocket.addTab(self.navTabs[-1], self.navTabs[-1].displayName)
-	def closeNavTab(self, index):
-		self.navTabs.pop(self.navTabs.index(self.navSocket.widget(index)))
-		self.navSocket.removeTab(index)
+	def closeNavTab(self, tab):
+		self.navTabs.pop(self.navTabs.index(tab))
+		self.navSocket.removeTab(self.navSocket.indexOf(tab))
 
 	def reloadConfig(self):
 		with open("config.json", "r") as file:
