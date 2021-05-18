@@ -175,6 +175,7 @@ class QNavTab(QScrollArea):
 
 	def resizeEvent(self, e=None):
 		self.elementsFrame.setGeometry(0, 0, self.width(), 35+len(self.shown)*21)
+		self.closeButton.setGeometry(0, 0, 25, 25)
 		self.nameHeader.setGeometry(25, 0, self.elementsFrame.width()-230, 20)
 		self.typeHeader.setGeometry(self.elementsFrame.width()-205, 0, 70, 20)
 		self.sizeHeader.setGeometry(self.elementsFrame.width()-135, 0, 100, 20)
@@ -215,13 +216,6 @@ class Elements(QFrame):
 			self.nav.window.updateHistory()
 		else:
 			system(("xdg-open " if ISUNIX else "start")+self.datas["absolutePath"])
-
-
-
-
-
-
-
 
 def getRealSize(path):
 	if isdir(path):

@@ -72,8 +72,11 @@ class Main(QBorderlessWindow):
 		self.navTabs[-1].changeDirectory(self.navTabs[-2].currentDirectory if len(self.navTabs) != 1 else expanduser("~"))
 		self.navSocket.addTab(self.navTabs[-1], self.navTabs[-1].displayName)
 	def closeNavTab(self, tab):
-		self.navTabs.pop(self.navTabs.index(tab))
-		self.navSocket.removeTab(self.navSocket.indexOf(tab))
+		if len(self.navTabs) != 1:
+			self.navTabs.pop(self.navTabs.index(tab))
+			self.navSocket.removeTab(self.navSocket.indexOf(tab))
+		else:
+			print("no")
 
 	def reloadConfig(self):
 		with open("config.json", "r") as file:

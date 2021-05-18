@@ -12,18 +12,22 @@
 	}
 	.QTitleBar #Icon{
 		color: titleBarIconColor;
+		font-size: 16px;
 	}
 	.QTitleBar #Title{
 		color: titleBarTextColor;
+		font-size: 16px;
 	}
 	.QTitleBar .QPushButton{
 		color: titleBarButtonAccentuation;
 		border-radius: 9px;
+		font-size: 16px;
 		border: none;
 	}
 	.QTitleBar .QPushButton:checked, .QTitleBar .QPushButton:pressed, .QTitleBar .QPushButton:hover{
 		background-color: titleBarButtonAccentuation;
 		color: titleBarBackgroundColor;
+		font-size: 12px;
 	}
 /* QTabWidget */
 	.QTabWidget::pane{
@@ -51,7 +55,6 @@
 	.QTabBar::tab:hover{
 		border: 1px solid navSocketTabHoverBorderColor;
 	}
-
 	.QTabBar::tab:selected {
 		border: 1px solid navSocketTabHoverBorderColor;
 		margin-right: -4px;
@@ -85,5 +88,17 @@
 	}
 	#HistoryButton:disabled{
 		background-color: historyButtonDisabled;
+		color: windowBackgroundColor;
+	}
+
+/* Close Button */
+	#closeButton{
+		color: navTabCloseButtonAccentuation;
+		border-radius: 5px;
+		font-size: 18px;
+		border: none;
+	}
+	#closeButton:pressed, #closeButton:hover{
+		background-color: navTabCloseButtonAccentuation;
 		color: windowBackgroundColor;
 	}
